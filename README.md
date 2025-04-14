@@ -26,8 +26,8 @@ El entorno es extensible y puede adaptarse fácilmente a diferentes configuracio
 
 1. Clonar el repositorio:
 ```bash
-git clone https://github.com/tu-usuario/grid-world-rl.git
-cd grid-world-rl
+git clone https://github.com/tu-usuario/GridRL.git
+cd GridRL
 ```
 
 2. Crear un entorno virtual (opcional):
