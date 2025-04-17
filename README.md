@@ -1,59 +1,66 @@
 # GridRL
 
-Este proyecto consiste en un entorno interactivo de aprendizaje por refuerzo (Reinforcement Learning) donde un agente autónomo debe aprender a navegar en una cuadrícula de 8x8. Su objetivo es desplazarse desde una posición inicial hasta una posición final, ambas ubicadas aleatoriamente en los bordes del grid. En su trayecto, el agente debe evitar obstáculos que penalizan su rendimiento y, al mismo tiempo, aprovechar recompensas que reducen su tiempo total.
+This project is an interactive reinforcement learning environment where an autonomous agent must learn to navigate an 8x8 grid. Its goal is to move from a randomly placed starting position to a randomly placed goal, both located on the edges of the grid. Along the way, the agent must avoid obstacles that penalize its performance and take advantage of rewards that reduce its total travel time.
 
-A pesar de su simplicidad visual, este entorno representa una excelente base para el estudio de técnicas de RL aplicadas a contextos reales como la logística, la planificación de rutas o la toma de decisiones en entornos parcialmente observables. La arquitectura del entorno permite observar, en tiempo real, el comportamiento del agente durante su entrenamiento, y analizar la evolución de su aprendizaje mediante gráficas.
+Despite its visual simplicity, this environment provides an excellent foundation for studying RL techniques applicable to real-world contexts such as logistics, route planning, or decision-making in partially observable environments. The environment's architecture allows real-time observation of the agent's behavior during training and the analysis of its learning progress through visual plots.
 
-## Características
+---
 
-El entorno genera un tablero de 8x8 con ubicaciones aleatorias para el inicio y el objetivo. A través de una interfaz desarrollada con Streamlit, es posible editar manualmente el entorno o poblarlo aleatoriamente con obstáculos y recompensas.
+## Features
 
-Los obstáculos representan penalizaciones de tiempo y simulan condiciones desfavorables para el movimiento del agente, como muros, lava o arena. Por otro lado, las recompensas ofrecen bonificaciones al rendimiento, simulando elementos como monedas, tesoros o pociones.
+The environment generates an 8x8 board with random positions for the start and goal. Through a Streamlit-based interface, users can manually edit the environment or populate it randomly with obstacles and rewards.
 
-El agente se entrena utilizando el algoritmo Deep Q-Learning (DQN), implementado en PyTorch, y aprende a maximizar su recompensa total durante cada episodio, decidiendo qué acciones tomar en función del estado del entorno.
+- **Obstacles** represent time penalties and simulate unfavorable movement conditions such as walls, lava, or sand.
+- **Rewards** provide performance bonuses, simulating elements such as coins, treasures, or potions.
 
-## Aplicaciones potenciales
+The agent is trained using the **Deep Q-Learning (DQN)** algorithm, implemented in **PyTorch**, and learns to maximize its total reward during each episode by deciding which actions to take based on the environment's state.
 
-Aunque diseñado como un entorno educativo y visualmente accesible, este simulador puede servir como base para:
+---
 
-- Sistemas de navegación autónoma.
-- Algoritmos de planificación y optimización de rutas.
-- Simulación de problemas logísticos.
+## Potential Applications
 
-El entorno es extensible y puede adaptarse fácilmente a diferentes configuraciones o dinámicas más complejas.
+Although designed as an educational and visually accessible environment, this simulator can serve as a foundation for:
 
-## Instalación y ejecución
+- Autonomous navigation systems  
+- Route planning and optimization algorithms  
+- Logistics problem simulations  
 
-1. Clonar el repositorio:
-```bash
-git clone https://github.com/tu-usuario/GridRL.git
-cd GridRL
-```
+The environment is **extensible** and can be easily adapted to different configurations or more complex dynamics.
 
-2. Crear un entorno virtual (opcional):
-```bash
-python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
-```
+---
 
-3. Instalar las dependencias:
-```bash
-pip install -r requirements.txt
-```
+## Installation and Execution
 
-4. Ejecutar la aplicación:
-```bash
-streamlit run main.py
-```
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/GridRL.git
+   cd GridRL
+   ```
+2. **Create the virtual environment**:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+3. **Install dependencies:**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. **Run the application**:
+   ```bash
+   streamlit run main.py
+   ```
+Once the application is launched, a web interface will open where you can configure the environment, start the agent's training, and observe the results of the learning process.
 
-Una vez lanzada la aplicación, se abrirá una interfaz web donde se puede configurar el entorno, iniciar el entrenamiento del agente y observar los resultados del proceso de aprendizaje.
+---
 
-## Estructura del proyecto
+## Project Structure
 
-El proyecto está organizado en varios módulos que separan la lógica del entorno, la implementación del agente y la interfaz gráfica:
+The project is organized into several modules that separate the environment logic, agent implementation, and graphical interface:
 
-- `main.py`: Punto de entrada de la aplicación.
-- `app.py`: Lógica de interacción y visualización con Streamlit.
-- `environment.py`: Definición del entorno Grid World.
-- `agent.py`: Implementación del agente basado en Deep Q-Learning.
-- `requirements.txt`: Lista de dependencias necesarias para ejecutar el proyecto.
+- `main.py`: Entry point of the application  
+- `app.py`: Interaction and visualization logic with Streamlit  
+- `environment.py`: Definition of the Grid World environment  
+- `agent.py`: Implementation of the Deep Q-Learning-based agent  
+- `requirements.txt`: List of dependencies needed to run the project
+
+   
